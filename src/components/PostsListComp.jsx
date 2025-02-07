@@ -1,4 +1,4 @@
-export default function PostsList({ postData }) {
+export default function PostsListComp({ postData }) {
   return (
     <ul className="grid grid-cols-3 gap-10 w-6xl mx-auto text-white">
       {postData.map((post) => {
