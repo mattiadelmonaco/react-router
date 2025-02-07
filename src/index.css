@@ -18,16 +18,28 @@ header {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.ms-header-container {
+.ms-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.625rem 0;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 
 .ms-logo__container {
   width: 3.75rem;
   height: 3.75rem;
   border-radius: 100px;
+}
+
+/* MAIN */
+
+/* FOOTER */
+
+footer {
+  background-color: #600e0e;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+footer hr {
+  border: 1px solid white;
+  margin: 1.25rem 0;
 }

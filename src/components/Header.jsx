@@ -4,7 +4,7 @@ import HeaderRightNav from "./HeaderRightNav";
 export default function Header() {
   return (
     <header>
-      <nav className="flex justify-between items-center ms-header-container">
+      <nav className="flex justify-between items-center ms-container">
         <Logo />
         <HeaderRightNav />
       </nav>
