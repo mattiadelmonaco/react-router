@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+/* GENERAL */
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+.active {
+  color: rgb(252, 223, 80);
+  background-color: #2e0707;
+}
+
+/* HEADER */
+
+header {
+  background-color: #600e0e;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.ms-header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.625rem 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.ms-logo__container {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 100px;
+}

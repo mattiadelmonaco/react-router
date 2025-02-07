@@ -1,7 +1,13 @@
+import Logo from "./Logo";
+import HeaderRightNav from "./HeaderRightNav";
+
 export default function Header() {
   return (
     <header>
-      <h1>React Blog</h1>
+      <nav className="flex justify-between items-center ms-header-container">
+        <Logo />
+        <HeaderRightNav />
+      </nav>
     </header>
   );
 }
