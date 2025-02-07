@@ -65,6 +65,15 @@ header li:hover {
 
 /* MAIN */
 
+main li {
+  transition: 0.4s;
+}
+
+main li:hover {
+  transition: 0.4s;
+  transform: scale(1.04);
+}
+
 /* POSTS LIST */
 
 .bg-posts-list {
