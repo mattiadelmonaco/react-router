@@ -32,6 +32,27 @@ header {
 
 /* MAIN */
 
+.under-costruction__img {
+  width: 31.25rem;
+  margin-bottom: 1.875rem;
+  display: flex;
+  justify-self: center;
+}
+
+.under-costruction__btn {
+  background-color: #600e0e;
+  padding: 0.625rem 0.875rem;
+  font-size: 1.25rem;
+  border-radius: 0.9375rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-self: center;
+  margin-top: 1.25rem;
+}
+
+/* HOMEPAGE */
+
 /* FOOTER */
 
 footer {
