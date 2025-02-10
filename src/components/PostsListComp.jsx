@@ -5,8 +5,8 @@ export default function PostsListComp({ postData }) {
     <ul className="grid grid-cols-3 gap-10 w-6xl mx-auto text-white">
       {postData.map((post) => {
         return (
-          <Link to={"#"} key={post.id}>
-            <li className="bg-red-950 h-[400px] rounded-3xl flex flex-col items-center p-4 shadow-2xl">
+          <Link to={`/posts-list/${post.id}`} key={post.id}>
+            <li className="bg-red-950 h-[400px] rounded-3xl flex flex-col items-center p-4 shadow-2xl ms-card">
               <div className="w-[200px] aspect-video object-cover my-3">
                 <img
                   className="size-full rounded-2xl"

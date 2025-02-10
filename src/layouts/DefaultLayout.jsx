@@ -10,7 +10,9 @@ export default function DefaultLayout() {
     <>
       <Header />
       <main
-        className={location.pathname === "/posts-list" ? "bg-posts-list" : ""}
+        className={
+          location.pathname.startsWith("/posts-list") ? "bg-posts-list" : ""
+        }
       >
         <Outlet />
       </main>

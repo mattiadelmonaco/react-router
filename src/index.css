@@ -64,11 +64,11 @@ header li:hover {
 
 /* MAIN */
 
-main li {
+.ms-card {
   transition: 0.4s;
 }
 
-main li:hover {
+.ms-card:hover {
   transition: 0.4s;
   transform: scale(1.04);
 }
@@ -78,6 +78,12 @@ main li:hover {
 .bg-posts-list {
   background-color: #290303;
   padding: 1.875rem 0;
+}
+
+/* SINGLE POST */
+
+ol {
+  list-style: decimal;
 }
 
 /* SECTION UNDER CONSTRUCTION */

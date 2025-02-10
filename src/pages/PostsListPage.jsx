@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import axios from "axios";
-import PostsList from "../components/PostsListComp";
+import PostsListComp from "../components/PostsListComp";
 
 export default function PostList() {
   const [postData, setPostData] = useState([]);
@@ -19,7 +19,7 @@ export default function PostList() {
 
   return (
     <section className="ms-container">
-      <PostsList postData={postData} />
+      <PostsListComp postData={postData} />
     </section>
   );
 }
