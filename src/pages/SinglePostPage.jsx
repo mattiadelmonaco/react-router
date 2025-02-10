@@ -13,11 +13,18 @@ export default function SinglePost() {
       .then((res) => setSinglePostData(res.data));
   };
 
+  const lengthPosts = () => {
+    axios.get("http://localhost:3000/posts").then((res) => res.data.length);
+  };
+
   useEffect(fetchPost, [id]);
 
   return (
     <div className="ms-container flex items-center flex-col text-white">
-      <SinglePostComp singlePostData={singlePostData} />
+      <SinglePostComp
+        singlePostData={singlePostData}
+        lengthPosts={lengthPosts}
+      />
     </div>
   );
 }

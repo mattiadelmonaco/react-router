@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export default function SinglePostComp({ singlePostData }) {
+export default function SinglePostComp({ singlePostData, lengthPosts }) {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-red-950 rounded-3xl flex flex-col items-center p-4 shadow-2xl max-w-3xl">
       <div className="w-[700px] object-cover my-3">
@@ -36,6 +39,22 @@ export default function SinglePostComp({ singlePostData }) {
           );
         })}
       </ol>
+      <div className="flex gap-40 my-4">
+        <button
+          onClick={() => navigate(`/posts-list/${singlePostData.id - 1}`)}
+          className="under-costruction__btn"
+          disabled={singlePostData.id === 1}
+        >
+          Post precedente
+        </button>
+        <button
+          onClick={() => navigate(`/posts-list/${singlePostData.id + 1}`)}
+          className="under-costruction__btn"
+          disabled={singlePostData.id === lengthPosts() - 1}
+        >
+          Post successivo
+        </button>
+      </div>
       <Link to="/posts-list" className="under-costruction__btn">
         Torna all'elenco dei post
       </Link>
