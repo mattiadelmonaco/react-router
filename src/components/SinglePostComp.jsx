@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-export default function SinglePostComp({ singlePostData, lengthPosts }) {
+export default function SinglePostComp({ singlePostData, postsLength }) {
   const navigate = useNavigate();
 
   return (
@@ -42,15 +42,19 @@ export default function SinglePostComp({ singlePostData, lengthPosts }) {
       <div className="flex gap-40 my-4">
         <button
           onClick={() => navigate(`/posts-list/${singlePostData.id - 1}`)}
-          className="under-costruction__btn"
+          className={`under-costruction__btn ${
+            singlePostData.id === 1 ? "disable-btn" : ""
+          }`}
           disabled={singlePostData.id === 1}
         >
           Post precedente
         </button>
         <button
           onClick={() => navigate(`/posts-list/${singlePostData.id + 1}`)}
-          className="under-costruction__btn"
-          disabled={singlePostData.id === lengthPosts() - 1}
+          className={`under-costruction__btn ${
+            singlePostData.id >= postsLength ? "disable-btn" : ""
+          }`}
+          disabled={singlePostData.id >= postsLength}
         >
           Post successivo
         </button>

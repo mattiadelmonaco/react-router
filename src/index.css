@@ -136,3 +136,14 @@ footer li:hover {
   transform: scale(1.3);
   transition: 0.4s;
 }
+
+.disable-btn {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.disable-btn:hover {
+  transform: scale(1);
+  background-color: #600e0e;
+  color: #fff;
+}
