@@ -54,7 +54,7 @@ export default function SinglePostComp({ singlePostData, postsLength }) {
           className={`under-costruction__btn ${
             singlePostData.id >= postsLength ? "disable-btn" : ""
           }`}
-          disabled={singlePostData.id >= postsLength}
+          disabled={singlePostData.id === postsLength}
         >
           Post successivo
         </button>
