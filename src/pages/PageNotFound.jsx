@@ -12,10 +12,17 @@ export default function PageNotFound() {
         <p className="text-xl">
           Stavi cercando una pagina rimossa o inesistente.
         </p>
-        <p className="text-xl">Clicca in basso per tornare alla Homepage</p>
-        <Link to="/" className="under-costruction__btn">
-          Torna alla Homepage
-        </Link>
+        <p className="text-xl">
+          Clicca in basso per tornare alla Homepage oppure all'elenco dei post
+        </p>
+        <div className="flex justify-around">
+          <Link to="/" className="under-costruction__btn">
+            Torna alla Homepage
+          </Link>
+          <Link to="/posts-list" className="under-costruction__btn">
+            Torna all'elenco dei post
+          </Link>
+        </div>
       </div>
     </main>
   );

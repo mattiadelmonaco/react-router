@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
 import SinglePostComp from "../components/SinglePostComp";
 
@@ -7,6 +7,7 @@ export default function SinglePost() {
   const [singlePostData, setSinglePostData] = useState({});
   const [postsLength, setPostsLength] = useState(0);
   const { id } = useParams();
+  const navigate = useNavigate();
 
   // to know array's length
   const lengthPosts = () => {
@@ -19,7 +20,12 @@ export default function SinglePost() {
   const fetchPost = () => {
     axios
       .get(`http://localhost:3000/posts/${id}`)
-      .then((res) => setSinglePostData(res.data));
+      .then((res) => setSinglePostData(res.data))
+      .catch((error) => {
+        if (error.status === 404) {
+          navigate("/404");
+        }
+      });
     lengthPosts();
   };
 
