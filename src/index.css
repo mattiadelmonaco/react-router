@@ -37,7 +37,6 @@ body {
 header {
   background-color: #600e0e;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-bottom: 1.875rem;
 }
 
 .ms-container {
@@ -106,7 +105,6 @@ main li:hover {
 footer {
   background-color: #600e0e;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-top: 1.875rem;
 }
 
 footer hr {
