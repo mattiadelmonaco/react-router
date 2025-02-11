@@ -26,10 +26,10 @@ export default function SinglePost() {
           navigate("/404");
         }
       });
-    lengthPosts();
   };
 
   useEffect(fetchPost, [id]);
+  useEffect(lengthPosts, []);
 
   return (
     <div className="ms-container flex items-center flex-col text-white">
